@@ -1,7 +1,7 @@
 # Low-Cost Force Measurement System Using Wii Balance Board
 
 ## Introduction
-Welcome to the GitHub repository for the thesis "Analysis and Validation of Low-Cost Force Measurement Systems," completed as part of an Electrical Engineering degree from the Royal Institute of Technology (KTH), Stockholm. This project aims to retrofit a Wii Balance Board with modern electronics to create an affordable, accurate force measurement device suitable for both sports and medical applications.
+The thesis "Analysis and Validation of Low-Cost Force Measurement Systems," was completed as part of an Electrical Engineering degree from the Royal Institute of Technology (KTH), Stockholm. This project aims to retrofit a Wii Balance Board with modern electronics to create an affordable, accurate force measurement device suitable for both sports and medical applications.
 
 ## Project Overview
 High costs and immobility limit the accessibility of traditional force measurement platforms. This project transforms the Wii Balance Board into a viable alternative by integrating advanced, yet cost-effective, electronics, providing a portable and affordable solution.
