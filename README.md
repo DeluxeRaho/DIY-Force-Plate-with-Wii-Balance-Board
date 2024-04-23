@@ -50,8 +50,37 @@ git clone https://github.com/DeluxeRaho/DIY-Force-Plate-with-Wii-Balance-Board.g
 ```
 - Install Arduino IDE and Python 3.x from their respective official websites.
 
-### Usage
-Upload the appropriate Arduino sketch to an ESP32 or compatible microcontroller connected to the Wii Balance Board’s load cells. Run the Python scripts to analyze the data and visualize the results. Configure and use Blynk for real-time monitoring and data visualization.
+## Usage
+
+### Preparation of the Wii Balance Board
+Before using the software provided in this repository, you need to prepare your Wii Balance Board:
+
+1. **Acquire a Wii Balance Board**: These are readily available second-hand online or at many gaming or electronics stores.
+2. **Open the Balance Board**: Carefully disassemble the Wii Balance Board. Instructions for this can typically be found online or in the user manual.
+3. **Remove Unnecessary Components**: Inside the Balance Board, you will find various electronics and wiring. Remove everything except for the load cells and their four connecting wires.
+4. **Identify Load Cell Wires**: Each load cell has four wires. These are usually colored red, black, white, and green or blue. The colors may vary depending on the manufacturer.
+
+### Connecting the Load Cells to an ADC
+After preparing the Wii Balance Board, you'll need to connect the load cells to an Analog-to-Digital Converter (ADC). Detailed circuit diagrams are provided in each project folder (`HX711` and `AD7124-8`) for both single-load-cell (`SINGLE`) and four-load-cell (`ALLFOUR`) configurations.
+
+1. **Choose an ADC**: Depending on your precision and frequency requirements, select either the HX711 or AD7124-8. The HX711 is suitable for lower-frequency measurements, whereas the AD7124-8 is better for high-frequency applications.
+2. **Wiring Load Cells to ADC**: Follow the circuit diagrams provided in the respective folder to correctly wire the load cells to your chosen ADC.
+3. **Calibration**: Before taking measurements, calibrate the load cells using the calibration steps provided in the [Calibration Process](#calibration-process) section.
+
+### Connecting ADC to a Microcontroller
+To process and transmit the data from the load cells:
+
+1. **Select a Microcontroller**: An ESP32 is recommended due to its built-in Wi-Fi capabilities, making it suitable for projects involving real-time data monitoring via the Blynk app.
+2. **Connect the ADC to the Microcontroller**: Use the circuit diagrams provided to connect your ADC to the ESP32 or other suitable microcontrollers.
+3. **Upload Arduino Sketch**: Depending on your configuration (single or four load cells), upload the appropriate Arduino sketch (`HX711SINGLE.ino`, `HX711ALLFOUR.ino`, `AD7124-8SINGLE.ino`, or `AD7124-8FOUR.ino`) to the microcontroller.
+
+### Running the System
+Once everything is connected and the software is uploaded:
+- Power on the system.
+- Use the Blynk app or another visualization tool to monitor the force measurements in real-time.
+- Regularly recalibrate and maintain the system to ensure accuracy and reliability.
+
+By following these detailed setup instructions, users will be able to transform a standard Wii Balance Board into a high-functioning, low-cost force measurement system suitable for a wide range of applications.
 
 ### How to Contribute
 Contributors are welcome to fork the repository, commit modifications to a new branch, and submit a pull request for review.
